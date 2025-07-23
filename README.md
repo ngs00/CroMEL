@@ -7,4 +7,4 @@ Despite remarkable successes of transfer learning in materials science, the prac
 - ``exec_tl.py``: A script to train and evaluate the target prediction models with the cross-modality transfer learning.
 
 > [!NOTE]
-> This is a note.
+> The source cluation dataset in ``dataset/src_calc/mps`` is an example. Please use your source calculation datasets or download a full database of Materials Project.
