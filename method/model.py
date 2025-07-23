@@ -72,7 +72,7 @@ class CrossModNet(torch.nn.Module):
                                        retain_graph=True, only_inputs=True)[0]
             gp = torch.mean((torch.linalg.norm(grad, dim=1) - 1)**2)
 
-            loss_crt = - torch.mean(critic_hs) + torch.mean(critic_hc) + 10 * gp
+            loss_crt = -torch.mean(critic_hs) + torch.mean(critic_hc) + 10 * gp
             self.opt_critic.zero_grad()
             loss_crt.backward()
             self.opt_critic.step()
